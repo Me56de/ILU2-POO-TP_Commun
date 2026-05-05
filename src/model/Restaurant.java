@@ -57,7 +57,7 @@ public class Restaurant implements IEtablissement<FormulaireRestaurant>  {
 
 		@Override 
 		public boolean estLibre(FormulaireRestaurant f) {
-			if (f.getNombrePersonnes() == 1) {
+			if (f.getNumService() == 1) {
 				return calendrier.estLibre(f.getJour(), f.getMois());
 			}
 			else {
